@@ -74,7 +74,7 @@ str( data <- list(y4d=y4d, nsites=nsites, K=K, nD=nD, midpt=midpt, delta=delta, 
 library(nimble)
 # Define model in BUGS
 # "tempemig4d.txt" in book code
-Section7p6_code <- nimbleCode( {
+Section9p6_code <- nimbleCode( {
     
     # Prior distributions
     beta0 ~ dnorm(0, 0.01)  # Intercept for log(lambda)
