@@ -58,7 +58,7 @@ library(AHMbook)
 
 ## Obtain a temporary emigration data set 
 set.seed(1234)
-str(tmp <- simHDSopen("point", nreps=7, nyears=5, nsites=100)  ) 
+str(tmp <- simHDSopen("point", nreps=7, nyears=5, nsites=100,discard0 = FALSE)  ) 
 attach(tmp)
 
 
@@ -70,7 +70,7 @@ delta <- 0.5
 nD <- B%/%delta                 # Number of distance classes
 midpt <- seq(delta/2, B, delta) # Mid-point of distance intervals
 
-## THE NEXT BLOCK OF CODE FROM THE AHM BOOK CODE DOES NOT SEEM TO WORK
+## THE NEXT BLOCK OF CODE FROM THE AHM BOOK CODE DOES NOT SEEM TO WORK - with discard0=FALSE, it should be ok.
 ## Create the 4-d array
 y4d <- array(0,dim=c(nsites, nD, K, nyears))
 for(yr in 1:nyears){
