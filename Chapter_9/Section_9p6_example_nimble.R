@@ -42,7 +42,7 @@ source("Chapter_9_setup.R")
 library(AHMbook)
 # Obtain a data set
 set.seed(1236)
-str(tmp <- simHDSopen("point", nreps=7, nyears=5, nsites=100, beta.trend=0.2) )
+str(tmp <- simHDSopen("point", nreps=7, nyears=5, nsites=100, beta.trend=0.2,discard0 = FALSE) )
 attach(tmp)
 
 #apply(tmp$M.true,2,sum)  # True population size per year
